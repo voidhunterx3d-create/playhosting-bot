@@ -23,6 +23,11 @@ function createBot() {
     bot.on('spawn', () => {
         console.log('Success: Bot logged into theelexiconsmp!');
         
+        // 🔑 PASSWORD PLUGIN LOGIN COMMAND
+        // Replace 'YOUR_BOT_PASSWORD' with a real password you want the bot to use
+        bot.chat('/register YOUR_BOT_PASSWORD YOUR_BOT_PASSWORD'); 
+        bot.chat('/login YOUR_BOT_PASSWORD'); 
+
         // Anti-AFK Routine: Tells the bot to jump once a minute to prevent kick timers
         setInterval(() => {
             bot.setControlState('jump', true);
